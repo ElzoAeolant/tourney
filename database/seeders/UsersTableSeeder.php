@@ -18,8 +18,8 @@ class UsersTableSeeder extends Seeder
         User::factory()->create([
             'id' => 1,
             'name' => 'Admin',
-            'email' => 'admin@PePeBots.com',
-            'password' => Hash::make('derfg3wksbp6'),
+            'email' => 'admin@pepebots.mx',
+            'password' => Hash::make('slth$s2uclR'),
             'role_id' => 1,
             'picture' => '../img/faces/face-0.jpg'
         ]);
@@ -27,8 +27,8 @@ class UsersTableSeeder extends Seeder
         User::factory()->create([
             'id' => 2,
             'name' => 'Creator',
-            'email' => 'creator@PePeBots.com',
-            'password' => Hash::make('derfg3wksbp6'),
+            'email' => 'creator@pepebots.mx',
+            'password' => Hash::make('1rOx2sPLC*a'),
             'role_id' => 2,
             'picture' => '../img/faces/face-0.jpg'
         ]);
@@ -36,8 +36,8 @@ class UsersTableSeeder extends Seeder
         User::factory()->create([
             'id' => 3,
             'name' => 'Member',
-            'email' => 'member@PePeBots.com',
-            'password' => Hash::make('derfg3wksbp6'),
+            'email' => 'member@pepebots.mx',
+            'password' => Hash::make('@lx5dro2O#r'),
             'role_id' => 3,
             'picture' => '../img/faces/face-0.jpg'
         ]);
