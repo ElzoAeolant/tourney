@@ -28,10 +28,12 @@ Route::get('/offline', function () {
     return view('vendor/laravelpwa/offline');
 });
 
-Route::get('dashboard', 'HomeController@index')->name('home');
+
 Route::get('lock', 'PageController@lock')->name('page.lock')->middleware('guest');
 
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('dashboard', 'HomeController@index')->name('home');
 
     Route::get('logs/export/', 'HomeController@export')->name('export.logs');
 
@@ -40,8 +42,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::patch('profile/password', 'ProfileController@password')->name('profile.password');   
     Route::resource('role', 'RoleController', ['except' => ['show']]);
     Route::resource('user', 'UserController', ['except' => ['show']]);
-    Route::resource('hotel', 'HotelController', ['except' => ['show']]);
-    Route::get('hotel/report', 'HotelController@report')->name("hotel.report");
    
 
     Route::get('{page}', 'PageController@index')->name('page.index');

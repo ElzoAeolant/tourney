@@ -45,7 +45,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $firstRecord = null;
+        /*$firstRecord = null;
         $countRecords = 0;
         $sizeof = 0;
         $dateFirstRecord = "--";
@@ -101,14 +101,14 @@ class HomeController extends Controller
         $data = array();
         $data['logs'] = array();
         $data['th'] = array();
-        $data["labels"] = null;
+        $data["labels"] = null;*/
 
 
-        foreach ($records as $record) {
+       /* foreach ($records as $record) {
             $location = Tracking::find($record["tracking_id"])->location()->get('id');
             $device = Tracking::find($record["tracking_id"])->device()->get('label')[0];
             $cluster = Location::find($location[0]->id)->cluster()->get(['id', 'color', 'name'])[0];
-            $newLabel = /*$cluster->name . "_" .*/ $device->label . "(" . $record["last_hour"] . ")";
+            $newLabel =  $device->label . "(" . $record["last_hour"] . ")";
             $data["labels"][$cluster->id][] = $newLabel;
             $data['logs'][$cluster->id]["data"][$newLabel] = $record["total"];
             $data['logs'][$cluster->id]["label"] = $cluster->name;
@@ -179,7 +179,15 @@ class HomeController extends Controller
         $data["update_records"] = $today;
         $data["records"] = $countRecords;
         $data["update_sizeof"] = $dateFirstRecord;
-        $data["sizeof"] = "~" . $sizeof . " MB";
+        $data["sizeof"] = "~" . $sizeof . " MB";*/
+        $data = array();
+        $data["labels"] = "";
+        $data['th'] = array();
+        $data['logs'] = array();
+        $data["update_records"] = "today";
+        $data["records"] = "100Fake";
+        $data["update_sizeof"] = "100MBFake";
+        $data["sizeof"] = "Fake";
         return view('pages.dashboard', $data);
     }
 

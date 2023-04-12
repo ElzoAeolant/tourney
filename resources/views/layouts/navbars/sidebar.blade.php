@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="green" data-image="{{ asset('img/sidebar-1.jpg') }}">
+<div class="sidebar" data-color="blue" data-image="{{ asset('img/sidebar-2.jpg') }}">
     <!--
 Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
@@ -81,12 +81,7 @@ Tip 2: you can also add an image using data-image tag
                         @endcan
 
                         @can('manage-items', App\Models\User::class)
-                        <li class="nav-item @if($activePage == 'hotels') active @endif">
-                            <a class="nav-link" href={{route('hotel.index')}}>
-                                <span class="sidebar-mini">{{ __('RM') }}</span>
-                                <span class="sidebar-normal">{{ __('Report Management') }}</span>
-                            </a>
-                        </li>
+                        
                         @endcan
 
 
