@@ -18,15 +18,11 @@ class DatabaseSeeder extends Seeder
 
         DB::table('roles')->truncate();
         DB::table('users')->truncate();
-        DB::table('tags')->truncate();
-        //DB::table('item_tag')->truncate();
-        //DB::table('categories')->truncate();
-        //DB::table('items')->truncate();
+
 
         $this->call([
             RolesTableSeeder::class,
             UsersTableSeeder::class,
-            DevicesSeeder::class
         ]);
 
         //$this->call([RolesTableSeeder::class, UsersTableSeeder::class, DevicesSeeder::class]);
