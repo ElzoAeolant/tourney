@@ -10,10 +10,10 @@ use App\Http\Controllers\Controller as Controller;
     /**
      * @OA\Info(
      *      version="1.0.0",
-     *      title="AEOLANT - Reporte Mensual OpenAPI",
+     *      title="PePeBots - Reporte Mensual OpenAPI",
      *      description="API destinada al soporte de reportes con intervalos flexibles de tiempo.",
      *      @OA\Contact(
-     *          email="cloudbeds@aeolant.com"
+     *          email="cloudbeds@PePeBots.com"
      *      ),
      *      @OA\License(
      *          name="Apache 2.0",
@@ -23,7 +23,7 @@ use App\Http\Controllers\Controller as Controller;
      *
      * @OA\Server(
      *      url=L5_SWAGGER_CONST_HOST,
-     *      description="API Cloudbeds-AEOLANT"
+     *      description="API Cloudbeds-PePeBots"
      * )
 
      *

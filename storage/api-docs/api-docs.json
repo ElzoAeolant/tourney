@@ -1,10 +1,10 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "AEOLANT - Reporte Mensual OpenAPI",
+        "title": "PePeBots - Reporte Mensual OpenAPI",
         "description": "API destinada al soporte de reportes con intervalos flexibles de tiempo.",
         "contact": {
-            "email": "cloudbeds@aeolant.com"
+            "email": "cloudbeds@PePeBots.com"
         },
         "license": {
             "name": "Apache 2.0",
@@ -14,8 +14,8 @@
     },
     "servers": [
         {
-            "url": "https://api.aeolant.com/v1",
-            "description": "API Cloudbeds-AEOLANT"
+            "url": "https://api.PePeBots.com/v1",
+            "description": "API Cloudbeds-PePeBots"
         }
     ],
     "paths": {

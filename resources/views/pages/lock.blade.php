@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'lock', 'title' => 'Smart Reports', 'activeButton' => 'EnergyManagement'])
+@extends('layouts.app', ['activePage' => 'lock', 'title' => 'Tourney', 'activeButton' => 'EnergyManagement'])
 
 @section('content')
     <div class="full-page lock-page" data-color="purple" data-image="img/bg4.jpg">

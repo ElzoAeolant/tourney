@@ -1,4 +1,4 @@
-@extends('layouts/app', ['activePage' => 'dashboard', 'activeButton' => 'AEOLANTMANAGMENT', 'title' => 'AEOLANT : Plataforma de generación de reportes', 'navName' => 'Dashboard'])
+@extends('layouts/app', ['activePage' => 'dashboard', 'activeButton' => 'PePeBotsMANAGMENT', 'title' => 'PePeBots : Plataforma de generación de reportes', 'navName' => 'Dashboard'])
 
 @section('content')
 <div class="content">

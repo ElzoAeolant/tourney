@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'login', 'title' => 'Smart Reports'])
+@extends('layouts.app', ['activePage' => 'login', 'title' => 'Tourney'])
 
 @section('content')
     <div class="full-page section-image" data-color="black" data-image="{{asset('img/full-screen-image-2.jpg')}}">

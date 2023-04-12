@@ -6,7 +6,7 @@
                     <a href="#" class="nav-link" target="_blank">{{ __('Kpsule4IT') }}</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link" target="_blank">{{ __('Smart Reports') }}</a>
+                    <a href="#" class="nav-link" target="_blank">{{ __('Tourney') }}</a>
                 </li>
                 <li>
                     <a href="#" class="nav-link" target="_blank">{{ __('About Us') }}</a>
@@ -17,7 +17,7 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script>
-                <a href="https://muvon.mx/es/">{{ __('Kpsule4IT') }}</a> &amp; <a href="https://muvon.mx/es/">{{ __('AEOLANT') }}</a> {{ __(' Smart Reports') }}
+                <a href="https://muvon.mx/es/">{{ __('Kpsule4IT') }}</a> &amp; <a href="https://muvon.mx/es/">{{ __('PePeBots') }}</a> {{ __(' Tourney') }}
             </p>
         </nav>
     </div>

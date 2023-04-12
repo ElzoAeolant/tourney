@@ -10,7 +10,7 @@ Tip 2: you can also add an image using data-image tag
                 {{ __('SR') }}
             </a>
             <a href="https://muvon.mx/es/" class="simple-text logo-normal">
-                {{ __('SMART REPORTS') }}
+                {{ __('Tourney') }}
             </a>
         </div>
         <div class="user">
@@ -55,7 +55,7 @@ Tip 2: you can also add an image using data-image tag
                         <img src="{{ asset('img/laravel.svg') }}" style="width:25px">
                     </i>
                     <p>
-                        {{ __('Smart Reports') }}
+                        {{ __('Tourney') }}
                         <b class="caret"></b>
                     </p>
                 </a>
