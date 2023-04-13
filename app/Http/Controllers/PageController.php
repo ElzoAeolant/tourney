@@ -43,7 +43,7 @@ class PageController extends Controller
      */
     public function ranking()
     {
-        return view('pages.charts');
+        return view('pages.ranking');
     }
 
     /**
