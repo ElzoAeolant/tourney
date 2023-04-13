@@ -24,11 +24,13 @@ Route::get('/', function () {
     return response()->redirectTo('/login');
 });
 
+
+
 Route::get('/offline', function () {
     return view('vendor/laravelpwa/offline');
 });
 
-
+Route::get('ranking', 'PageController@ranking')->name('page.ranking')->middleware('guest');
 Route::get('lock', 'PageController@lock')->name('page.lock')->middleware('guest');
 
 Route::group(['middleware' => 'auth'], function () {

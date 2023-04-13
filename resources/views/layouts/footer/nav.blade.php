@@ -17,7 +17,7 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script>
-                <a href="https://muvon.mx/es/">{{ __('Kpsule4IT') }}</a> &amp; <a href="https://muvon.mx/es/">{{ __('PePeBots') }}</a> {{ __(' Tourney') }}
+                <a href="https://www.pescaypetroleo.info/">{{ __('Kpsule4IT') }}</a> &amp; <a href="https://www.pescaypetroleo.info/">{{ __('PePeBots') }}</a> {{ __(' Tourney') }}
             </p>
         </nav>
     </div>

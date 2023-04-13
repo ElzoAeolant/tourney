@@ -37,13 +37,13 @@ class PageController extends Controller
     }
 
     /**
-     * Display the pricing page
+     * Display the ranking page
      *
      * @return \Illuminate\View\View
      */
-    public function pricing()
+    public function ranking()
     {
-        return view('pages.pricing');
+        return view('pages.charts');
     }
 
     /**
