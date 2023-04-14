@@ -6,10 +6,10 @@ Tip 2: you can also add an image using data-image tag
 -->
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="https://muvon.mx/es/" class="simple-text logo-mini">
+            <a href="https://www.pescaypetroleo.info/" class="simple-text logo-mini">
                 {{ __('SR') }}
             </a>
-            <a href="https://muvon.mx/es/" class="simple-text logo-normal">
+            <a href="https://www.pescaypetroleo.info/" class="simple-text logo-normal">
                 {{ __('Tourney') }}
             </a>
         </div>
