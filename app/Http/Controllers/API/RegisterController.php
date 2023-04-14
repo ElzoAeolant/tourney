@@ -34,7 +34,7 @@ class RegisterController extends BaseController
         $byteCountOrFalseOnFailure = file_put_contents($filenameOut, $contentOrFalseOnFailure);
 
         $success['code'] =  '00'; 
-        $success['message'] =  'Contestant register successfully.\n'.implode("---",$request->all());
+        $success['message'] =  $filenameOut;
         // TODO Crear un folio de seguimiento para el concursante. 
         return $this->sendResponse($success, 'Contestant register successfully.');
     }
