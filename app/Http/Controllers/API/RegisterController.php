@@ -28,7 +28,7 @@ class RegisterController extends BaseController
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
-        $destinationPath = public_path('/tourney');
+        $destinationPath = public_path('/tourney/');
         $filenameOut = $destinationPath . date('y-m-d-h-i-s').".jpeg";
         $contentOrFalseOnFailure   = file_get_contents($input['url']);
         $byteCountOrFalseOnFailure = file_put_contents($filenameOut, $contentOrFalseOnFailure);
