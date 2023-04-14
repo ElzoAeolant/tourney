@@ -26,8 +26,7 @@ class RegisterController extends BaseController
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
-        $success['code'] =  '00'; 
-        $success['message'] =  'Contestant register successfully.';
+       
         // TODO Crear un folio de seguimiento para el concursante. 
         return $this->sendResponse($success, 'Contestant register successfully.');
     }
