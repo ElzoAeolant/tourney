@@ -29,12 +29,13 @@ class RegisterController extends BaseController
             return $this->sendError('Validation Error.', $validator->errors());       
         }
         $destinationPath = public_path('/tourney/');
-        $filenameOut = $destinationPath . date('y-m-d-h-i-s').".jpeg";
+        $filename = date('y-m-d-h-i-s').".jpeg";
+        $filenameOut = $destinationPath . $filename;
         $contentOrFalseOnFailure   = file_get_contents($input['url']);
         $byteCountOrFalseOnFailure = file_put_contents($filenameOut, $contentOrFalseOnFailure);
 
         $success['code'] =  '00'; 
-        $success['message'] =  $filenameOut;
+        $success['message'] =  "https://pepebot.ecosur.mx:10443/tourney/".$filename;
         // TODO Crear un folio de seguimiento para el concursante. 
         return $this->sendResponse($success, 'Contestant register successfully.');
     }
