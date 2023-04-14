@@ -17,7 +17,9 @@ class RegisterController extends BaseController
      */
     public function register(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
             /**'data1' => 'required',
             'data2' => 'required',
             'url' => 'required',*/
@@ -26,6 +28,11 @@ class RegisterController extends BaseController
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
+        $destinationPath = public_path('/tourney');
+        $filenameOut = $destinationPath . date('y-m-d-h-i-s').".jpeg";
+        $contentOrFalseOnFailure   = file_get_contents($input['url']);
+        $byteCountOrFalseOnFailure = file_put_contents($filenameOut, $contentOrFalseOnFailure);
+
         $success['code'] =  '00'; 
         $success['message'] =  'Contestant register successfully.\n'.implode("---",$request->all());
         // TODO Crear un folio de seguimiento para el concursante. 
