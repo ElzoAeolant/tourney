@@ -22,7 +22,4 @@ Route::controller(RegisterController::class)->group(function(){
         
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('logs', LogController::class);
-    Route::controller(RegisterController::class)->group(function(){
-        Route::post('register', 'register');
-   });
 });
