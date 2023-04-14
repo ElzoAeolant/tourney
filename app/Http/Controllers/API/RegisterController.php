@@ -26,10 +26,9 @@ class RegisterController extends BaseController
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
-   
+        $success['code'] =  '00'; 
+        $success['message'] =  'Contestant register successfully.';
         // TODO Crear un folio de seguimiento para el concursante. 
-
-        
         return $this->sendResponse($success, 'Contestant register successfully.');
     }
    
@@ -38,14 +37,13 @@ class RegisterController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function login(Request $request)
+    public function createToken(Request $request)
     {
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){ 
             $user = Auth::user(); 
-            $success['token'] =  $user->createToken('EnergynoAPI')->plainTextToken; 
+            $success['token'] =  $user->createToken('pepebotsTourney')->plainTextToken; 
             $success['name'] =  $user->name;
-   
-            return $this->sendResponse($success, 'User login successfully.');
+            return $this->sendResponse($success, 'User token created successfully.');
         } 
         else{ 
             return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);

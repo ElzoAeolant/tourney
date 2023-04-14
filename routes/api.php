@@ -15,10 +15,10 @@ use App\Http\Controllers\API\LogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\RegisterController;
 
-// Route::controller(RegisterController::class)->group(function(){
-//     Route::post('register', 'register');
-//     Route::post('login', 'login');
-// });
+Route::controller(RegisterController::class)->group(function(){
+     Route::post('register', 'register');
+     Route::post('createToken', 'createToken');
+});
         
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('logs', LogController::class);
