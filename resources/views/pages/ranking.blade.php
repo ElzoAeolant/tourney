@@ -4,7 +4,7 @@
 <!--Card body-->
 <div class="full-page lock-page" data-color="blue" data-image="img/bg5.jpg">
   <div class="content">
-    <div class="col-lg-4 mx-auto">
+    <div class="col-lg-4 col-m-4 mx-auto">
       <!-- List group-->
       <ul class="list-group shadow">
 
