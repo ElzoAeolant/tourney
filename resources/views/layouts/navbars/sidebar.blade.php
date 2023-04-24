@@ -88,6 +88,45 @@ Tip 2: you can also add an image using data-image tag
                     </ul>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#EnergyManagement" @if($activeButton=='EnergyManagement' ) aria-expanded="true" @endif>
+                    <i>
+                        <img src="{{ asset('img/laravel.svg') }}" style="width:25px">
+                    </i>
+                    <p>
+                        {{ __('Tourney') }}
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse  @if($activeButton =='TourneyManagement') show @endif" id="TourneyManagement">
+                    <ul class="nav">
+
+                        @can('manage-users', App\Models\User::class)
+                        <li class="nav-item @if($activePage == 'role') active @endif">
+                            <a class="nav-link" href={{ route('role.index') }}>
+                                <span class="sidebar-mini">{{ __('RM') }}</span>
+                                <span class="sidebar-normal">{{ __('Role Managements') }}</span>
+                            </a>
+                        </li>
+                        @endcan
+
+                        @can('manage-users', App\Models\User::class)
+                        <li class="nav-item @if($activePage == 'user') active @endif">
+                            <a class="nav-link" href={{route('user.index')}}>
+                                <span class="sidebar-mini">{{ __('UM') }}</span>
+                                <span class="sidebar-normal">{{ __('User Management') }}</span>
+                            </a>
+                        </li>
+                        @endcan
+
+                        @can('manage-items', App\Models\User::class)
+                        
+                        @endcan
+
+
+                    </ul>
+                </div>
+            </li>
             @endcan
         </ul>
     </div>
