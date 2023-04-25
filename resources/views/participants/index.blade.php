@@ -1,4 +1,5 @@
-@extends('layouts.app', ['activePage' => 'participant', 'activeButton' => 'EnergyManagement', 'title' => 'Tourney', 'navName' => 'participants' ])
+@extends('layouts.app', ['activePage' => 'participant', 'activeButton' => 'TourneyManagement', 'title' => 'Tourney', 'navName' => 'participants' ])
+
 
 @section('content')
     <div class="content">
@@ -15,7 +16,7 @@
                                         {{ __('Management') }}
                                     </p>
                                 </div>
-                                @can('create', App\Tag::class)
+                                @can('create', App\Models\Participant::class)
                                     <div class="col-4 text-right">
                                         <a href="{{ route('participant.create') }}" class="btn btn-sm btn-primary">{{ __('Add participant') }}</a>
                                     </div>

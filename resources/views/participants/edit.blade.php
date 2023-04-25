@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'device', 'activeButton' => 'EnergyManagement', 'title' => 'Tourney', 'navName' => 'Devices' ])
+@extends('layouts.app', ['activePage' => 'participant', 'activeButton' => 'TourneyManagement', 'title' => 'Tourney', 'navName' => 'participants' ])
 
 @section('content')
     <div class="content">

@@ -7,14 +7,20 @@ use Illuminate\Http\Request;
 
 class ParticipantController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(User::class);
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Participant $model)
     {
-        //
+        $this->authorize('manage-items', User::class);
+
+        return view('participants.index', ['participants' => $model->all()]);
     }
 
     /**
@@ -24,7 +30,7 @@ class ParticipantController extends Controller
      */
     public function create()
     {
-        //
+        return view('participants.create');
     }
 
     /**
