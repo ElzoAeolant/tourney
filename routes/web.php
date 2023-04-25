@@ -44,6 +44,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::patch('profile/password', 'ProfileController@password')->name('profile.password');   
     Route::resource('role', 'RoleController', ['except' => ['show']]);
     Route::resource('user', 'UserController', ['except' => ['show']]);
+
+    Route::resource('participant', 'ParticipantController', ['except' => ['show']]);
+    Route::resource('register', 'RegisterController', ['except' => ['show']]);
    
 
     Route::get('{page}', 'PageController@index')->name('page.index');

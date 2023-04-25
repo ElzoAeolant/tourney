@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'device', 'activeButton' => 'EnergyManagement', 'title' => 'Tourney', 'navName' => 'Devices' ])
+@extends('layouts.app', ['activePage' => 'participant', 'activeButton' => 'EnergyManagement', 'title' => 'Tourney', 'navName' => 'participants' ])
 
 @section('content')
     <div class="content">
@@ -10,14 +10,14 @@
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">{{ __('Devices') }}</h3>
+                                    <h3 class="mb-0">{{ __('participants') }}</h3>
                                     <p class="text-sm mb-0">
                                         {{ __('Management') }}
                                     </p>
                                 </div>
                                 @can('create', App\Tag::class)
                                     <div class="col-4 text-right">
-                                        <a href="{{ route('device.create') }}" class="btn btn-sm btn-primary">{{ __('Add device') }}</a>
+                                        <a href="{{ route('participant.create') }}" class="btn btn-sm btn-primary">{{ __('Add participant') }}</a>
                                     </div>
                                 @endcan
                             </div>
@@ -28,7 +28,7 @@
                             @include('alerts.errors')
                         </div>
 
-                        <div class="table-responsive py-4" id="devices-table">
+                        <div class="table-responsive py-4" id="participants-table">
                             <table id="datatables" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%" style="width:100% ">
                                 <thead>
                                     <tr>
@@ -54,23 +54,23 @@
                                 </tfoot>
                                 <tbody>
 
-                                    @foreach ($devices as $device)
+                                    @foreach ($participants as $participant)
                                         <tr>
-                                            <td>{{ $device->label }}</td>
-                                            <td>{{ $device->token }}</td>
-                                            <td><span class="badge badge-default" style="background-color:{{ $colors[$device->status] }}">{{ $device->status }}</span></td>
-                                            <td>{{ $device->created_at }}</td>
+                                            <td>{{ $participant->label }}</td>
+                                            <td>{{ $participant->token }}</td>
+                                            <td><span class="badge badge-default" style="background-color:{{ $colors[$participant->status] }}">{{ $participant->status }}</span></td>
+                                            <td>{{ $participant->created_at }}</td>
                                             @can('manage-items', App\Models\User::class)
                                                 <td class="text-right">
-                                                    @if (auth()->user()->can('update', $device) || auth()->user()->can('delete', $device))
-                                                        @can('update', $device)
-                                                            <a href="{{ route('device.edit', $device->id) }}" class="btn btn-link btn-warning edit d-inline-block"><i class="fa fa-edit"></i></a>
+                                                    @if (auth()->user()->can('update', $participant) || auth()->user()->can('delete', $participant))
+                                                        @can('update', $participant)
+                                                            <a href="{{ route('participant.edit', $participant->id) }}" class="btn btn-link btn-warning edit d-inline-block"><i class="fa fa-edit"></i></a>
                                                         @endcan
-                                                        @if (auth()->user()->can('delete', $device))
-                                                            <form class="d-inline-block" action="{{ route('device.destroy', $device->id) }}" method="POST">
+                                                        @if (auth()->user()->can('delete', $participant))
+                                                            <form class="d-inline-block" action="{{ route('participant.destroy', $participant->id) }}" method="POST">
                                                                 @method('delete')
                                                                 @csrf
-                                                                <a class="btn btn-link btn-danger " onclick="confirm('{{ __('Are you sure you want to delete this device?') }}') ? this.parentElement.submit() : ''"s><i class="fa fa-times"></i></a>
+                                                                <a class="btn btn-link btn-danger " onclick="confirm('{{ __('Are you sure you want to delete this participant?') }}') ? this.parentElement.submit() : ''"s><i class="fa fa-times"></i></a>
                                                             </form>
                                                         @endif
                                                     @endif
