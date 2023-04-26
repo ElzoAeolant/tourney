@@ -45,7 +45,7 @@ class RegisterController extends BaseController
         $part = new Participant();
         $part->create($input);
         $success['code'] =  '00'; 
-        $success['message'] =  "El registro fue creado satisfactoriamente, tu folio de participación es:*". $newId . "*. En los próximos días tu registro se reflejará en ";
+        $success['message'] =  "El registro fue creado satisfactoriamente, tu folio de participación es:*". $newId . "*.";
         // TODO Crear un folio de seguimiento para el concursante. 
         return $this->sendResponse($success, 'Contestant register successfully.');
     }
