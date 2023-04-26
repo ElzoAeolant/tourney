@@ -17,7 +17,7 @@ use App\Http\Controllers\API\RegisterController;
 
 Route::controller(RegisterController::class)->group(function(){
      Route::post('createToken', 'createToken');
-     Route::get('register', 'register');
+     Route::post('register', 'register');
 });
         
 Route::middleware('auth:sanctum')->group( function () {
