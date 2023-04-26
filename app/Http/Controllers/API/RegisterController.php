@@ -45,7 +45,7 @@ class RegisterController extends BaseController
         $part = new Participant();
         $part->create($input);
         $success['code'] =  '00'; 
-        $success['message'] =  "https://pepebot.ecosur.mx:10443/tourney/".$filename;
+        $success['message'] =  "El registro fue creado satisfactoriamente, tu folio de participación es:*". $newId . "*. En los próximos días tu registro se reflejará en ";
         // TODO Crear un folio de seguimiento para el concursante. 
         return $this->sendResponse($success, 'Contestant register successfully.');
     }
