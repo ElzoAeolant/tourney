@@ -17,14 +17,16 @@ return new class extends Migration
             $table->id();
             $table->string('folio');
             $table->string('url');
-            $table->string('telefono');
-            $table->string('user_whatsapp');
-            $table->string('nombre_embarcacion');
+            $table->string('telefono')->default("none");
+            $table->string('user_whatsapp')->default("none");
+            $table->string('nombre_embarcacion')->default("none");
             $table->integer('peso_eviscerado')->unsigned()->default(0);
             $table->integer('zona_pesca')->unsigned()->default(0);
             $table->integer('talla')->unsigned()->default(0);
-            $table->string('arte_pesca');
-            $table->date('fecha_pesca');
+            $table->string('arte_pesca')->default("none");
+            $table->boolean('validated')->default(false);
+            $table->boolean('showed')->default(false);
+            $table->date('fecha_pesca')->nullable();
             $table->timestamps();
         });
     }

@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Participant extends Model
 {
     use HasFactory;
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'folio', 'url', 'telefono', 'user_whatsapp' ,'nombre_embarcacion','peso_eviscerado',
+        'zona_pesca','talla','arte_pesca','validated','showed','fecha_pesca'
+    ];
 }

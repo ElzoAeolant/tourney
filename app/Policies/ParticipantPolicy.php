@@ -2,6 +2,7 @@
 
 namespace App\Policies;
 
+use App\Models\Participant;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
@@ -38,7 +39,7 @@ class ParticipantPolicy
      * @param  \App\Models\User  $model
      * @return boolean
      */
-    public function update(User $user, User $model)
+    public function update(User $user, Participant $model)
     {
         return $user->isAdmin();
     }
@@ -50,7 +51,7 @@ class ParticipantPolicy
      * @param  \App\Models\User  $model
      * @return boolean
      */
-    public function delete(User $user, User $model)
+    public function delete(User $user, Participant $model)
     {
         return $user->isAdmin() && $user->id != $model->id;
     }

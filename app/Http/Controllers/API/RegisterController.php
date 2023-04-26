@@ -4,7 +4,7 @@ namespace App\Http\Controllers\API;
    
 use Illuminate\Http\Request;
 use App\Http\Controllers\API\BaseController as BaseController;
-use App\Models\User;
+use App\Models\Participant;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
    
@@ -20,20 +20,30 @@ class RegisterController extends BaseController
         $input = $request->all();
 
         $validator = Validator::make($input, [
-            /**'data1' => 'required',
+            /*'data1' => 'required',
             'data2' => 'required',
             'url' => 'required',*/
         ]);
-   
+        $newId = Participant::latest()->first();
+        if ( isset($newId->id) ){
+            $newId = $newId->id + 1;
+        }else{
+            $newId = 1;
+        }
+        $newId =  "pepebots_" . date('y-m-d-h-i-s') . "-" . str_pad($newId, 4, "0", STR_PAD_LEFT); 
+
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
+        
+        $input['folio'] = $newId;
         $destinationPath = public_path('/tourney/');
-        $filename = date('y-m-d-h-i-s').".jpeg";
+        $filename = $newId.".jpeg";
         $filenameOut = $destinationPath . $filename;
         $contentOrFalseOnFailure   = file_get_contents($input['url']);
         $byteCountOrFalseOnFailure = file_put_contents($filenameOut, $contentOrFalseOnFailure);
-
+        $part = new Participant();
+        $part->create($input);
         $success['code'] =  '00'; 
         $success['message'] =  "https://pepebot.ecosur.mx:10443/tourney/".$filename;
         // TODO Crear un folio de seguimiento para el concursante. 
