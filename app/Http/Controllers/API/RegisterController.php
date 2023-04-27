@@ -37,7 +37,7 @@ class RegisterController extends BaseController
         }
         
         $input['folio'] = $newId;
-        $input['url_pepebot'] = "https://pepebot.ecosur.mx:10443/tourney/".$newId;
+        $input['url_pepebot'] = "https://pepebot.ecosur.mx:10443/tourney/".$newId.".jpg";
         $destinationPath = public_path('/tourney/');
         $filename = $newId.".jpeg";
         $filenameOut = $destinationPath . $filename;
