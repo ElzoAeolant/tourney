@@ -28,7 +28,6 @@ return new class extends Migration
             $table->string('talla')->default("none");
             $table->boolean('validated')->default(false);
             $table->boolean('showed')->default(false);
-            $table->date('fecha_pesca')->nullable();
             $table->timestamps();
         });
     }
