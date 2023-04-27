@@ -114,7 +114,6 @@
                                         <th>{{ __('ID') }}</th>
                                         <th>{{ __('FOLIO') }}</th>
                                         <th>{{ __('VALIDADO') }}</th>
-                                        <th>{{ __('MOSTRAR') }}</th>
                                         <th>{{ __('FECHA') }}</th>
                                         @can('manage-items', App\Models\User::class)
                                             <th class="disabled-sorting text-right">{{ __('Actions') }}</th>
@@ -126,7 +125,6 @@
                                         <th>{{ __('ID') }}</th>
                                         <th>{{ __('FOLIO') }}</th>
                                         <th>{{ __('VALIDADO') }}</th>
-                                        <th>{{ __('MOSTRAR') }}</th>
                                         <th>{{ __('FECHA') }}</th>
                                         @can('manage-items', App\Models\User::class)
                                             <th class="disabled-sorting text-right">{{ __('Actions') }}</th>
@@ -141,7 +139,7 @@
                                             <td>{{ $participant->folio }}</td>
                                             
                                             <td><span class="badge badge-default" style="background-color:{{ $participant->validated==1?'green':'red' }}">{{  $participant->validated==1?'SI':'NO' }}</span></td>
-                                            <td>{{ $participant->showed }}</td>
+                                            
                                             <td>{{ $participant->created_at }}</td>
                                             @can('manage-items', App\Models\User::class)
                                                 <td class="text-right">
