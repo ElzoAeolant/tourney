@@ -5,7 +5,7 @@ return [
     'documentations' => [
         'default' => [
             'api' => [
-                'title' => 'OpenAPI Energyno',
+                'title' => 'OpenAPI PePeBot Tourney',
             ],
 
             'routes' => [

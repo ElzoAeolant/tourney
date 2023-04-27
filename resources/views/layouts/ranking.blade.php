@@ -79,7 +79,7 @@
     <!-- Bootstrap Tourist -->
     <script src="{{ asset('js/plugins/bootstrap-tourist.js') }}"></script>
     <!-- Light Dashboard DEMO methods, don't include it in your project! -->
-    <script src="{{ asset('js/energyno.js?v=1.0') }}"></script>
+    <script src="{{ asset('js/pepebots.js?v=1.0') }}"></script>
     @stack('js')
     <script>
         $(document).ready(function () {

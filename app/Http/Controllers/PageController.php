@@ -16,6 +16,7 @@
 
 */
 namespace App\Http\Controllers;
+use App\Models\Participant;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -43,7 +44,7 @@ class PageController extends Controller
      */
     public function ranking()
     {
-        return view('pages.ranking');
+        return view('pages.ranking', ['participants' => Participant::all()]);
     }
 
     /**

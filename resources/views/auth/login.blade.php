@@ -10,7 +10,7 @@
                         @csrf
                         <div class="card card-login card-hidden">
                             <div class="card-header ">
-                            <h3 class="header text-center"><img class="text-center" src="{{ asset('img/favicon/android-chrome-192x192.png') }}" alt="Energyno"></h3>
+                            <h3 class="header text-center"><img class="text-center" src="{{ asset('img/favicon/android-chrome-192x192.png') }}" alt="PePeBots"></h3>
                                 <h3 class="header text-center">{{ __('Login') }}</h3>
                             </div>
                             <div class="card-body ">

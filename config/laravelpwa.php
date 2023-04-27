@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'name' => 'EnergynoPWA',
+    'name' => 'PePeBotsPWA',
     'manifest' => [
-        'name' => env('APP_NAME', 'Energyno'),
-        'short_name' => 'Energyno',
+        'name' => env('APP_NAME', 'PePeBots'),
+        'short_name' => 'PePeBots',
         'start_url' => '/',
         'background_color' => '#ffffff',
         'theme_color' => '#000000',
