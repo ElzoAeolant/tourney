@@ -87,9 +87,9 @@
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">{{ __('participants') }}</h3>
+                                    <h3 class="mb-0">{{ __('Participantes') }}</h3>
                                     <p class="text-sm mb-0">
-                                        {{ __('Management') }}
+                                        {{ __('Listado') }}
                                     </p>
                                 </div>
                                 @can('create', App\Models\Participant::class)
