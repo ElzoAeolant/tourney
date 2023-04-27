@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('folio');
             $table->string('url');
+            $table->string('url_pepebot')->default("none");
             $table->string('tel')->default("none");
             $table->string('user')->default("none");
             $table->string('AreaPesca')->default("none");
