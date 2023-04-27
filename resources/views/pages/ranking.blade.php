@@ -1,80 +1,216 @@
-@extends('layouts.ranking', ['activePage' => 'lock', 'title' => 'Tourney', 'activeButton' => 'EnergyManagement'])
+@extends('layouts.app', ['activePage' => 'participant', 'activeButton' => 'TourneyManagement', 'title' => 'Tourney', 'navName' => 'participants'])
 
 @section('content')
-    <!--Card body-->
-    <div class="full-page lock-page" data-color="blue" data-image="img/bg5.jpg">
-        <div class="content">
-            <div class="col-lg-4 col-m-4 mx-auto">
-                <!-- List group-->
-                <ul class="list-group shadow">
-                    <li class="list-group-item">
-                        <div class="">
-                            <div class="card card-small">
-                                <div class="thumbnail">
-                                    <img alt="Opt alp thumbnail"
-                                        src="https://inaturalist-open-data.s3.amazonaws.com/photos/69805355/original.jpg">
-                                    <a href="#/product/awesome-landing-page">
-                                        <div class="thumb-cover"></div>
-                                    </a>
-                                    <div class="details">
-                                        <div class="user">
-                                            <div class="user-photo">
-                                                <img alt="Thumb"
-                                                    src="https://bootdey.com/img/Content/avatar/avatar1.png">
-                                            </div>
-                                            <div class="name">User </div>
-                                        </div>
-                                        <div class="numbers">
-                                            <b class="downloads"><i class="fa fa-arrow-circle-o-down"></i> 1124</b>
-                                            <b class="comments-icon"><i class="fa fa-comment"></i> 10</b>
-                                        </div>
-                                        <div class="clearfix"></div>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card card-stats">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="icon-big text-center icon-warning">
+                                       <img src="{{ asset('images/medals/gold-medal.png') }}" width="80">
                                     </div>
                                 </div>
-                                <div class="moving">
-                                    <h5 class="mb-0 pt-3">
-                                        <a href="" class="text-reset">Noah Pierre</a>
-                                    </h5>
-                                    <span class="text-muted small d-block mb-4">Full stack developer</span>
-                                    <div class="row mx-0 border-top border-bottom">
-                                        <div class="col-6 text-center border-end py-3">
-                                            <h5 class="mb-0">2345</h5>
-                                            <small class="text-muted">Followers</small>
-                                        </div>
-                                        <div class="col-6 text-center py-3">
-                                            <h5 class="mb-0">54</h5>
-                                            <small class="text-muted">Following</small>
-                                        </div>
+                                <div class="col-7">
+                                    <div class="numbers">
+                                        <p class="card-category">{{ __('POR DEFINIRSE') }}</p>
+                                        <h4 class="card-title">Primer Lugar</h4>
                                     </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
-                                            <span class="text-muted small">Join</span>
-                                            <strong>April 2014</strong>
-                                        </li>
-                                        <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
-                                            <span class="text-muted small">Location</span>
-                                            <strong>Barcelona, Spain</strong>
-                                        </li>
-                                        <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
-                                            <span class="text-muted small d-flex align-items-center">
-                                                <span
-                                                    class="align-middle lh-1 me-1 size-5 border border-4 border-success rounded-circle d-inline-block"></span>
-                                                Online
-                                            </span>
-                                            <div class="text-end">
-                                                <a href="#!.html" class="btn btn-sm btn-primary">Follow</a>
-                                            </div>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <!-- End -->
-                    </li>
-                </ul>
-                <!-- End -->
+                        <div class="card-footer ">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-gift"></i> {{ __('GPS Strike 4') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card card-stats">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="icon-big text-center icon-warning">
+                                        <img src="{{ asset('images/medals/silver-medal.png') }}" width="80">
+                                     </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="numbers">
+                                        <p class="card-category">{{ __('POR DEFINIRSE') }}</p>
+                                        <h4 class="card-title">{{ __('Segundo Lugar') }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer ">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-refresh"></i> {{ __('Smartphone Redmi Note 12') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card card-stats">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="icon-big text-center icon-warning">
+                                        <img src="{{ asset('images/medals/bronze-medal.png') }}" width="80">
+                                     </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="numbers">
+                                        <p class="card-category">{{ __('POR DEFINIRSE') }}</p>
+                                        <h4 class="card-title">{{ __('Tercer Lugar') }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer ">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-refresh"></i> {{ __('Lentes de Sol Polarizados ZAIL') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card data-tables">
 
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0">{{ __('participants') }}</h3>
+                                    <p class="text-sm mb-0">
+                                        {{ __('Management') }}
+                                    </p>
+                                </div>
+                                @can('create', App\Models\Participant::class)
+                                    <div class="col-4 text-right">
+                                        <a href="{{ route('participant.create') }}"
+                                            class="btn btn-sm btn-primary">{{ __('Add participant') }}</a>
+                                    </div>
+                                @endcan
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-2">
+                            @include('alerts.success')
+                            @include('alerts.errors')
+                        </div>
+
+                        <div class="table-responsive py-4" id="participants-table">
+                            <table id="datatables" class="table table-striped table-bordered table-hover" cellspacing="0"
+                                width="100%" style="width:100% ">
+                                <thead>
+                                    <tr>
+                                        <th>{{ __('ID') }}</th>
+                                        <th>{{ __('FOLIO') }}</th>
+                                        <th>{{ __('VALIDADO') }}</th>
+                                        <th>{{ __('MOSTRAR') }}</th>
+                                        <th>{{ __('FECHA') }}</th>
+                                        @can('manage-items', App\Models\User::class)
+                                            <th class="disabled-sorting text-right">{{ __('Actions') }}</th>
+                                        @endcan
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>{{ __('ID') }}</th>
+                                        <th>{{ __('FOLIO') }}</th>
+                                        <th>{{ __('VALIDADO') }}</th>
+                                        <th>{{ __('MOSTRAR') }}</th>
+                                        <th>{{ __('FECHA') }}</th>
+                                        @can('manage-items', App\Models\User::class)
+                                            <th class="disabled-sorting text-right">{{ __('Actions') }}</th>
+                                        @endcan
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+
+                                    @foreach ($participants as $participant)
+                                        <tr>
+                                            <td>{{ $participant->id }}</td>
+                                            <td>{{ $participant->folio }}</td>
+                                            
+                                            <td><span class="badge badge-default" style="background-color:{{ $participant->validated==1?'green':'red' }}">{{  $participant->validated==1?'SI':'NO' }}</span></td>
+                                            <td>{{ $participant->showed }}</td>
+                                            <td>{{ $participant->created_at }}</td>
+                                            @can('manage-items', App\Models\User::class)
+                                                <td class="text-right">
+                                                    @if (auth()->user()->can('update', $participant) ||
+                                                            auth()->user()->can('delete', $participant))
+                                                        @can('update', $participant)
+                                                            <a href="{{ route('participant.edit', $participant->id) }}"
+                                                                class="btn btn-link btn-warning edit d-inline-block"><i
+                                                                    class="fa fa-edit"></i></a>
+                                                        @endcan
+                                                        @if (auth()->user()->can('delete', $participant))
+                                                            <form class="d-inline-block"
+                                                                action="{{ route('participant.destroy', $participant->id) }}"
+                                                                method="POST">
+                                                                @method('delete')
+                                                                @csrf
+                                                                <a class="btn btn-link btn-danger "
+                                                                    onclick="confirm('{{ __('Are you sure you want to delete this participant?') }}') ? this.parentElement.submit() : ''"s><i
+                                                                        class="fa fa-times"></i></a>
+                                                            </form>
+                                                        @endif
+                                                    @endif
+                                                </td>
+                                            @endcan
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 @endsection
+
+@push('js')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#datatables').DataTable({
+                "pagingType": "full_numbers",
+                "lengthMenu": [
+                    [10, 25, 50, -1],
+                    [10, 25, 50, "All"]
+                ],
+                responsive: true,
+                columnDefs: [{
+                    "type": "num",
+                    "targets": 0
+                }],
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.12.1/i18n/es-MX.json"
+                }
+
+            });
+
+            var table = $('#datatables').DataTable();
+
+            // Delete a record
+            table.on('click', '.remove', function(e) {
+                $tr = $(this).closest('tr');
+                table.row($tr).remove().draw();
+                e.preventDefault();
+            });
+
+            //Like record
+            table.on('click', '.like', function() {
+                alert('You clicked on Like button');
+            });
+        });
+    </script>
+@endpush
