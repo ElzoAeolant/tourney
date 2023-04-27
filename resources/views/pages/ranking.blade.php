@@ -49,7 +49,7 @@
                         <div class="card-footer ">
                             <hr>
                             <div class="stats">
-                                <i class="fa fa-refresh"></i> {{ __('Smartphone Redmi Note 12') }}
+                                <i class="fa fa-gift"></i> {{ __('Smartphone Redmi Note 12') }}
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                         <div class="card-footer ">
                             <hr>
                             <div class="stats">
-                                <i class="fa fa-refresh"></i> {{ __('Lentes de Sol Polarizados ZAIL') }}
+                                <i class="fa fa-gift"></i> {{ __('Lentes de Sol Polarizados ZAIL') }}
                             </div>
                         </div>
                     </div>
