@@ -30,7 +30,7 @@ class RegisterController extends BaseController
         }else{
             $newId = 1;
         }
-        $newId =  "pepebots_" . date('y-m-d-h-i-s') . "-" . str_pad($newId, 4, "0", STR_PAD_LEFT); 
+        $newId =  "pepebots_" . date('ymdhis') . "_" . str_pad($newId, 4, "0", STR_PAD_LEFT); 
 
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
