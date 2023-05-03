@@ -49,6 +49,7 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
             @can('manage-items', App\Models\User::class)
+            @can('manage-users', App\Models\User::class)
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#UsersManagement" @if($activeButton=='UsersManagement' ) aria-expanded="true" @endif>
                     <i>
@@ -59,6 +60,7 @@ Tip 2: you can also add an image using data-image tag
                         <b class="caret"></b>
                     </p>
                 </a>
+                
                 <div class="collapse  @if($activeButton =='UsersManagement') show @endif" id="UsersManagement">
                     <ul class="nav">
 
@@ -88,6 +90,7 @@ Tip 2: you can also add an image using data-image tag
                     </ul>
                 </div>
             </li>
+            @endcan
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#TourneyManagement" @if($activeButton=='TourneyManagement' ) aria-expanded="true" @endif>
                     <i>
