@@ -84,7 +84,7 @@
                         <fieldset>
                             <div class="form-group">
                                 <label for="example-color-input" class="form-control-label{{ $errors->has('comentarios') ? ' has-danger' : '' }}">{{__('Observaciones')}}</label>
-                                <input class="form-control{{ $errors->has('comentarios') ? ' is-invalid' : '' }}" name="comentarios" maxlength="30" value="{{ old('comentarios', $participant->comentarios) }}" placeholder="{{__('Observaciones')}}">
+                                <textarea class="form-control{{ $errors->has('comentarios') ? ' is-invalid' : '' }}" name="comentarios" style="height: 150px;">{{ old('comentarios', $participant->comentarios) }} </textarea>
                                 @include('alerts.feedback', ['field' => 'comentarios'])
                             </div>
                         </fieldset>
