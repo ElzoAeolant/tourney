@@ -49,87 +49,87 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
             @can('manage-items', App\Models\User::class)
-            @can('manage-users', App\Models\User::class)
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#UsersManagement" @if($activeButton=='UsersManagement' ) aria-expanded="true" @endif>
-                    <i>
-                        <img src="{{ asset('img/laravel.svg') }}" style="width:25px">
-                    </i>
-                    <p>
-                        {{ __('System') }}
-                        <b class="caret"></b>
-                    </p>
-                </a>
-                
-                <div class="collapse  @if($activeButton =='UsersManagement') show @endif" id="UsersManagement">
-                    <ul class="nav">
+                @can('manage-users', App\Models\User::class)
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#UsersManagement" @if($activeButton=='UsersManagement' ) aria-expanded="true" @endif>
+                        <i>
+                            <img src="{{ asset('img/laravel.svg') }}" style="width:25px">
+                        </i>
+                        <p>
+                            {{ __('System') }}
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    
+                    <div class="collapse  @if($activeButton =='UsersManagement') show @endif" id="UsersManagement">
+                        <ul class="nav">
 
-                        @can('manage-users', App\Models\User::class)
-                        <li class="nav-item @if($activePage == 'role') active @endif">
-                            <a class="nav-link" href={{ route('role.index') }}>
-                                <span class="sidebar-mini">{{ __('RM') }}</span>
-                                <span class="sidebar-normal">{{ __('Role Management') }}</span>
-                            </a>
-                        </li>
-                        @endcan
+                            @can('manage-users', App\Models\User::class)
+                            <li class="nav-item @if($activePage == 'role') active @endif">
+                                <a class="nav-link" href={{ route('role.index') }}>
+                                    <span class="sidebar-mini">{{ __('RM') }}</span>
+                                    <span class="sidebar-normal">{{ __('Role Management') }}</span>
+                                </a>
+                            </li>
+                            @endcan
 
-                        @can('manage-users', App\Models\User::class)
-                        <li class="nav-item @if($activePage == 'user') active @endif">
-                            <a class="nav-link" href={{route('user.index')}}>
-                                <span class="sidebar-mini">{{ __('UM') }}</span>
-                                <span class="sidebar-normal">{{ __('User Management') }}</span>
-                            </a>
-                        </li>
-                        @endcan
+                            @can('manage-users', App\Models\User::class)
+                            <li class="nav-item @if($activePage == 'user') active @endif">
+                                <a class="nav-link" href={{route('user.index')}}>
+                                    <span class="sidebar-mini">{{ __('UM') }}</span>
+                                    <span class="sidebar-normal">{{ __('User Management') }}</span>
+                                </a>
+                            </li>
+                            @endcan
 
-                        @can('manage-items', App\Models\User::class)
-                        
-                        @endcan
-
-
-                    </ul>
-                </div>
-            </li>
-            @endcan
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#TourneyManagement" @if($activeButton=='TourneyManagement' ) aria-expanded="true" @endif>
-                    <i>
-                        <img src="{{ asset('img/laravel.svg') }}" style="width:25px">
-                    </i>
-                    <p>
-                        {{ __('Tourney') }}
-                        <b class="caret"></b>
-                    </p>
-                </a>
-                <div class="collapse  @if($activeButton =='TourneyManagement') show @endif" id="TourneyManagement">
-                    <ul class="nav">
-
-                        @can('manage-items', App\Models\User::class)
-                        <li class="nav-item @if($activePage == 'participant') active @endif">
-                            <a class="nav-link" href={{ route('participant.index') }}>
-                                <span class="sidebar-mini">{{ __('PM') }}</span>
-                                <span class="sidebar-normal">{{ __('Participant Management') }}</span>
-                            </a>
-                        </li>
-                        @endcan
-
-                        @can('manage-items', App\Models\User::class)
-                        <li class="nav-item @if($activePage == 'register') active @endif">
-                            <a class="nav-link" href={{route('register.index')}}>
-                                <span class="sidebar-mini">{{ __('RM') }}</span>
-                                <span class="sidebar-normal">{{ __('Register Management') }}</span>
-                            </a>
-                        </li>
-                        @endcan
-
-                        @can('manage-items', App\Models\User::class)
-                        
-                        @endcan
+                            @can('manage-items', App\Models\User::class)
+                            
+                            @endcan
 
 
-                    </ul>
-                </div>
-            </li>
+                        </ul>
+                    </div>
+                </li>
+                @endcan
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#TourneyManagement" @if($activeButton=='TourneyManagement' ) aria-expanded="true" @endif>
+                        <i>
+                            <img src="{{ asset('img/laravel.svg') }}" style="width:25px">
+                        </i>
+                        <p>
+                            {{ __('Tourney') }}
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse  @if($activeButton =='TourneyManagement') show @endif" id="TourneyManagement">
+                        <ul class="nav">
+
+                            @can('manage-items', App\Models\User::class)
+                            <li class="nav-item @if($activePage == 'participant') active @endif">
+                                <a class="nav-link" href={{ route('participant.index') }}>
+                                    <span class="sidebar-mini">{{ __('PM') }}</span>
+                                    <span class="sidebar-normal">{{ __('Participant Management') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+
+                            @can('manage-items', App\Models\User::class)
+                            <li class="nav-item @if($activePage == 'register') active @endif">
+                                <a class="nav-link" href={{route('register.index')}}>
+                                    <span class="sidebar-mini">{{ __('RM') }}</span>
+                                    <span class="sidebar-normal">{{ __('Register Management') }}</span>
+                                </a>
+                            </li>
+                            @endcan
+
+                            @can('manage-items', App\Models\User::class)
+                            
+                            @endcan
+
+
+                        </ul>
+                    </div>
+                </li>
             @endcan
         </ul>
     </div>
