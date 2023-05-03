@@ -46,8 +46,8 @@ class PageController extends Controller
     {
         $rank = Participant::where('validated', '=', 1)
                             ->where('showed', '=', 1)
-                            ->orderByRaw('CAST(talla AS UNSIGNED) DESC')
-                            ->orderByRaw('CAST(pesoEviserado AS UNSIGNED) DESC')
+                            ->orderByRaw('CAST(talla AS FLOAT) DESC')
+                            ->orderByRaw('CAST(pesoEviserado AS FLOAT) DESC')
                             ->limit(3)
                             ->get();      
         
