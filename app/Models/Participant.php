@@ -16,6 +16,6 @@ class Participant extends Model
     protected $fillable = [
         'folio', 'url', 'url_pepebot', 'tel' ,'user','AreaPesca',
         'NombreEmbarcacion','fechaPesca','artePesca','pesoEviserado','talla',
-        'validated','showed'
+        'validated','showed', 'comentarios'
     ];
 }

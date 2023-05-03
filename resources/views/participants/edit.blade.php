@@ -82,6 +82,13 @@
                             </div>
                         </fieldset>
                         <fieldset>
+                            <div class="form-group">
+                                <label for="example-color-input" class="form-control-label{{ $errors->has('comentarios') ? ' has-danger' : '' }}">{{__('Observaciones')}}</label>
+                                <input class="form-control{{ $errors->has('comentarios') ? ' is-invalid' : '' }}" name="comentarios" maxlength="30" value="{{ old('comentarios', $participant->comentarios) }}" placeholder="{{__('Observaciones')}}">
+                                @include('alerts.feedback', ['field' => 'comentarios'])
+                            </div>
+                        </fieldset>
+                        <fieldset>
                             <div class="col-sm-10 form-group">
                                 <input type="hidden" name="validated" value="{{ $participant->validated }}">
                                 <div class="form-check">

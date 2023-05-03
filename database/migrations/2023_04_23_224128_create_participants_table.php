@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('fechaPesca')->default("none");
             $table->string('artePesca')->default("none");
             $table->string('pesoEviserado')->default("none");
+            $table->string('comentarios', 1000)->default("none");
             $table->string('talla')->default("none");
             $table->boolean('validated')->default(false);
             $table->boolean('showed')->default(false);
