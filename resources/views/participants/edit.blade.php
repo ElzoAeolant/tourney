@@ -79,6 +79,23 @@
                             </div>
                         </fieldset>
                         <fieldset>
+                            <div class="col-sm-10" class="form-group">
+                                <input type="hidden" name="validated" value="{{ $participant->validated }}">
+                                <input type="checkbox" class="form-check-input{{ $errors->has('validated') ? ' is-invalid' : '' }}" name="validated" value="1" {{ $participant->validated ? 'checked' : '' }}>
+                                <label class="form-check-label" for="check2">Validar</label>
+                                @include('alerts.feedback', ['field' => 'validated'])
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="col-sm-10" class="form-group">
+                                <input type="hidden" name="showed" value="{{ $participant->showed }}">
+                                <input type="checkbox" class="form-check-input{{ $errors->has('showed') ? ' is-invalid' : '' }}" name="showed" value="1" {{ $participant->showed ? 'checked' : '' }}>
+                                <label class="form-check-label" for="check2">Participa</label>
+                                @include('alerts.feedback', ['field' => 'showed'])
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm-10">
