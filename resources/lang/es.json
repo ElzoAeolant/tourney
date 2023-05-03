@@ -81,5 +81,6 @@
     "Participant Management" : "Gestión de participantes", 
     "Tourney" : "Torneo", 
     "System" : "Plataforma", 
-    "Register Management" : "Pre-registro"
+    "Register Management" : "Pre-registro",
+    "Participant successfully updated." : "Participante actualizado correctamente"
 }
