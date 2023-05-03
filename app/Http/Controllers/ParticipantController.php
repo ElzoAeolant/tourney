@@ -64,6 +64,8 @@ class ParticipantController extends Controller
     public function edit(Participant $participant)
     {
         //
+        $this->authorize('manage-items', User::class);
+        return view('participants.edit');
     }
 
     /**
@@ -76,6 +78,18 @@ class ParticipantController extends Controller
     public function update(Request $request, Participant $participant)
     {
         //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Participant  $participant
+     * @return \Illuminate\Http\Response
+     */
+    public function disqualified(Request $request, Participant $participant)
+    {
+        $participant->update(['show' => true]);
     }
 
     /**

@@ -39,6 +39,8 @@
                                         <th>{{ __('FOLIO') }}</th>
                                         <th>{{ __('TELEFONO') }}</th>
                                         <th>{{ __('IMAGEN') }}</th>
+                                        <th>{{ __('TALLA') }}</th>
+                                        <th>{{ __('PESO') }}</th>
                                         <th>{{ __('VALIDADO') }}</th>
                                         <th>{{ __('MOSTRAR') }}</th>
                                         <th>{{ __('FECHA') }}</th>
@@ -53,6 +55,8 @@
                                         <th>{{ __('FOLIO') }}</th>
                                         <th>{{ __('TELEFONO') }}</th>
                                         <th>{{ __('IMAGEN') }}</th>
+                                        <th>{{ __('TALLA') }}</th>
+                                        <th>{{ __('PESO') }}</th>
                                         <th>{{ __('VALIDADO') }}</th>
                                         <th>{{ __('MOSTRAR') }}</th>
                                         <th>{{ __('FECHA') }}</th>
@@ -69,6 +73,8 @@
                                             <td>{{ $participant->folio }}</td>
                                             <td>{{ $participant->tel }}</td>
                                             <td><a href="{{$participant->url_pepebot }}">Ver Imagen</a> </td>                                           
+                                            <td>{{ $participant->talla }}</td>
+                                            <td>{{ $participant->pesoEviserado }}</td>
                                             <td><span class="badge badge-default" style="background-color:{{ $participant->validated==1?'green':'red' }}">{{  $participant->validated==1?'TRUE':'FALSE' }}</span></td>
                                             <td>{{ $participant->showed }}</td>
                                             <td>{{ $participant->created_at }}</td>
