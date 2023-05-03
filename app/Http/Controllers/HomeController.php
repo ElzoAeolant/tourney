@@ -21,6 +21,7 @@ namespace App\Http\Controllers;
 use App\Models\Log;
 use App\Models\Location;
 use App\Models\Tracking;
+use App\Models\Participant;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use Maatwebsite\Excel\Facades\Excel;
@@ -180,6 +181,9 @@ class HomeController extends Controller
         $data["records"] = $countRecords;
         $data["update_sizeof"] = $dateFirstRecord;
         $data["sizeof"] = "~" . $sizeof . " MB";*/
+
+        return view('pages.ranking', ['participants' => Participant::all()]);
+
         $data = array();
         $data["labels"] = "";
         $data['th'] = array();
@@ -188,7 +192,7 @@ class HomeController extends Controller
         $data["records"] = "100Fake";
         $data["update_sizeof"] = "100MBFake";
         $data["sizeof"] = "Fake";
-        return view('pages.dashboard', $data);
+        return view('pages.ranking', $data);
     }
 
     public function export() 
