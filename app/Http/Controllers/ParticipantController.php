@@ -75,7 +75,9 @@ class ParticipantController extends Controller
      */
     public function update(Request $request, Participant $participant)
     {
-        //
+        $participant->update($request->all());
+
+        return redirect()->route('participant.index')->withStatus(__('Participant successfully updated.'));
     }
 
     /**

@@ -37,46 +37,35 @@
                                     <tr>
                                         <th>{{ __('ID') }}</th>
                                         <th>{{ __('FOLIO') }}</th>
-                                        <th>{{ __('TELEFONO') }}</th>
+                                        <th>{{ __('DETALLE') }}</th>
                                         <th>{{ __('IMAGEN') }}</th>
                                         <th>{{ __('TALLA') }}</th>
                                         <th>{{ __('PESO') }}</th>
-                                        <th>{{ __('VALIDADO') }}</th>
-                                        <th>{{ __('MOSTRAR') }}</th>
+                                        <th>{{ __('VERIFICADO') }}</th>
+                                        <th>{{ __('PARTICIPA') }}</th>
                                         <th>{{ __('FECHA') }}</th>
                                         @can('manage-items', App\Models\User::class)
-                                            <th class="disabled-sorting text-right">{{ __('Actions') }}</th>
+                                            <th class="disabled-sorting text-right">{{ __('EDITAR') }}</th>
                                         @endcan
                                     </tr>
                                 </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th>{{ __('ID') }}</th>
-                                        <th>{{ __('FOLIO') }}</th>
-                                        <th>{{ __('TELEFONO') }}</th>
-                                        <th>{{ __('IMAGEN') }}</th>
-                                        <th>{{ __('TALLA') }}</th>
-                                        <th>{{ __('PESO') }}</th>
-                                        <th>{{ __('VALIDADO') }}</th>
-                                        <th>{{ __('MOSTRAR') }}</th>
-                                        <th>{{ __('FECHA') }}</th>
-                                        @can('manage-items', App\Models\User::class)
-                                            <th class="disabled-sorting text-right">{{ __('Actions') }}</th>
-                                        @endcan
-                                    </tr>
-                                </tfoot>
                                 <tbody>
 
                                     @foreach ($participants as $participant)
                                         <tr>
                                             <td>{{ $participant->id }}</td>
                                             <td>{{ $participant->folio }}</td>
-                                            <td>{{ $participant->tel }}</td>
+                                            <td><b>Tel:</b> {{ $participant->tel }}<br>
+                                                <b>Embarcación:</b> {{ $participant->NombreEmbarcacion }}<br>
+                                                <b>Zona:</b> {{ $participant->AreaPesca }}<br>
+                                                <b>Fecha:</b> {{ $participant->fechaPesca }}<br>
+                                                <b>Arte:</b> {{ $participant->artePesca }}<br>
+                                            </td>
                                             <td><a href="{{$participant->url_pepebot }}">Ver Imagen</a> </td>                                           
                                             <td>{{ $participant->talla }}</td>
                                             <td>{{ $participant->pesoEviserado }}</td>
                                             <td><span class="badge badge-default" style="background-color:{{ $participant->validated==1?'green':'red' }}">{{  $participant->validated==1?'TRUE':'FALSE' }}</span></td>
-                                            <td>{{ $participant->showed }}</td>
+                                            <td><span class="badge badge-default" style="background-color:{{ $participant->showed==1?'green':'red' }}">{{  $participant->showed==1?'TRUE':'FALSE' }}</span></td>
                                             <td>{{ $participant->created_at }}</td>
                                             @can('manage-items', App\Models\User::class)
                                                 <td class="text-right">
@@ -87,7 +76,7 @@
                                                                 class="btn btn-link btn-warning edit d-inline-block"><i
                                                                     class="fa fa-edit"></i></a>
                                                         @endcan
-                                                        @if (auth()->user()->can('delete', $participant))
+                                                        @if (auth()->user()->can('deleteit', $participant))
                                                             <form class="d-inline-block"
                                                                 action="{{ route('participant.destroy', $participant->id) }}"
                                                                 method="POST">
