@@ -113,7 +113,7 @@ Tip 2: you can also add an image using data-image tag
                             </li>
                             @endcan
 
-                            @can('manage-items', App\Models\User::class)
+                            @can('manage-itemsss', App\Models\User::class)
                             <li class="nav-item @if($activePage == 'register') active @endif">
                                 <a class="nav-link" href={{route('register.index')}}>
                                     <span class="sidebar-mini">{{ __('RM') }}</span>
