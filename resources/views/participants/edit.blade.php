@@ -7,66 +7,39 @@
                 <div class="card-header ">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h3 class="mb-0">{{ __('Edit Device') }}</h3>
+                            <h3 class="mb-0">{{ __('Edit Participant') }}</h3>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('device.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
+                            <a href="{{ route('participant.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card-body ">
-                    <form method="post" action="{{ route('device.update', $device->id) }}" >
+                    <form method="post" action="{{ route('participant.update', $participant->id) }}" >
                         @csrf 
                         @method('patch')
-                        <h6 class="heading-small text-muted mb-4">{{ __('Device informations') }}</h6> 
+                        <h6 class="heading-small text-muted mb-4">{{ __('Participant data') }}</h6> 
                         <fieldset>
                             <div class="form-group">
-                                <label class="form-control-label{{ $errors->has('token') ? ' has-danger' : '' }}">
-                                    {{ __('Token') }}</label>
-                                <input type="text" class="form-control{{ $errors->has('token') ? ' is-invalid' : '' }}" name="token" maxlength="30" value="{{ old('token', $device->token) }}" placeholder="{{ __('Token') }}" autofocus>
-                                @include('alerts.feedback', ['field' => 'token'])
+                                <label for="example-color-input" class="form-control-label{{ $errors->has('folio') ? ' has-danger' : '' }}">{{__('FOLIO')}}</label>
+                                <input disabled class="form-control{{ $errors->has('folio') ? ' is-invalid' : '' }}" name="folio" maxlength="30" value="{{ old('folio', $participant->folio) }}" placeholder="{{__('folio')}}">
+                                <a href="{{$participant->url_pepebot }}" target="_blank" ><img src="{{$participant->url_pepebot }}" width="240" height="320">Ver Original</a>
+                                @include('alerts.feedback', ['field' => 'folio'])
                             </div>
                         </fieldset>
                         <fieldset>
                             <div class="form-group">
-                                <label for="example-color-input" class="form-control-label{{ $errors->has('label') ? ' has-danger' : '' }}">{{__('Label')}}</label>
-                                <input class="form-control{{ $errors->has('label') ? ' is-invalid' : '' }}" name="label" maxlength="30" value="{{ old('label', $device->label) }}" placeholder="{{__('Label')}}">
-                                @include('alerts.feedback', ['field' => 'label'])
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="form-group {{ $errors->has('status') ? ' has-danger' : '' }}">
-                                <label class="form-control-label">{{ __('Status') }}</label>
-                                <div class="form-check form-check-radio">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="status" id="StandBy" value="StandBy" {{ old('status', $device->status) == 'StandBy' ? ' checked' : '' }}>
-                                        <span class="form-check-sign"></span>
-                                        <label class="badge badge-default" style="background-color:{{ $colors['StandBy'] }}">{{ __('-') }}</label> {{ __('StandBy') }}
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-radio">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="status" id="Operativo" value="Operativo" {{ old('status', $device->status) == 'Operativo' ? ' checked' : '' }}>
-                                        <span class="form-check-sign"></span>
-                                        <label class="badge badge-default" style="background-color:{{ $colors['Operativo'] }}">{{ __('-') }}</label> {{ __('Operativo') }}
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-radio">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="status" id="No Operativo" value="No Operativo" {{ old('status', $device->status) == 'No Operativo' ? ' checked' : '' }}>
-                                        <span class="form-check-sign" ></span>
-                                        <label class="badge badge-default" style="background-color:{{ $colors['No Operativo'] }}">{{ __('-') }}</label> {{ __('No Operativo') }}
-                                    </label>
-                                </div>
-                                @include('alerts.feedback', ['field' => 'status'])
+                                <label for="example-color-input" class="form-control-label{{ $errors->has('url_pepebot') ? ' has-danger' : '' }}">{{__('IMAGEN')}}</label>
+                                
+                                @include('alerts.feedback', ['field' => 'url_pepebot'])
                             </div>
                         </fieldset>
                         <fieldset>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm-10">
-                                        <button type="submit" class="btn btn-warning">{{ __('Update device') }}</button>
+                                        <button type="submit" class="btn btn-warning">{{ __('Update participant') }}</button>
                                     </div>
                                 </div>
                             </div>

@@ -63,7 +63,7 @@ class ParticipantController extends Controller
      */
     public function edit(Participant $participant)
     {
-        return view('participants.create', compact($participant));
+        return view('participants.edit', compact('participant'));
     }
 
     /**
