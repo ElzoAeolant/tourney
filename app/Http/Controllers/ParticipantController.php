@@ -9,7 +9,7 @@ class ParticipantController extends Controller
 {
     public function __construct()
     {
-        $this->authorizeResource(User::class);
+        $this->authorizeResource(Participant::class);
     }
     /**
      * Display a listing of the resource.
@@ -63,9 +63,7 @@ class ParticipantController extends Controller
      */
     public function edit(Participant $participant)
     {
-        //
-        $this->authorize('manage-items', User::class);
-        return view('participants.edit');
+        return view('participants.create', compact($participant));
     }
 
     /**

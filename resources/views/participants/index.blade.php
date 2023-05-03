@@ -83,7 +83,7 @@
                                                     @if (auth()->user()->can('update', $participant) ||
                                                             auth()->user()->can('delete', $participant))
                                                         @can('update', $participant)
-                                                            <a href="{{ route('participant.edit', $participant->id) }}"
+                                                            <a href="{{ route('participant.edit', $participant) }}"
                                                                 class="btn btn-link btn-warning edit d-inline-block"><i
                                                                     class="fa fa-edit"></i></a>
                                                         @endcan
