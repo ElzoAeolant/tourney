@@ -73,5 +73,13 @@
     "Device Tracking successfully created." : "Monitoreo creado correctamente.",
     "Tracking successfully updated." : "Monitoreo actualizado correctamente.",
     "Tracking successfully deleted." : "Monitoreo borrado correctamente.",
-    "Last Date Record":"Ultimo Envío"
+    "Last Date Record":"Ultimo Envío",
+    "participants" : "Participantes", 
+    "Update participant" : "Actualizar Participante",
+    "Edit Participant" : "Editar participante",
+    "Participant data" : "Datos",
+    "Participant Management" : "Gestión de participantes", 
+    "Tourney" : "Torneo", 
+    "System" : "Plataforma", 
+    "Register Management" : "Pre-registro"
 }
