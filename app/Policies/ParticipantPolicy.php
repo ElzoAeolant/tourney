@@ -29,7 +29,7 @@ class ParticipantPolicy
      */
     public function create(User $user)
     {
-        return $user->isAdmin() || $user->isCreator();
+        return $user->isAdmin();
     }
 
     /**
@@ -41,7 +41,7 @@ class ParticipantPolicy
      */
     public function update(User $user, Participant $model)
     {
-        return $user->isAdmin();
+        return $user->isAdmin() || $user->isCreator();
     }
 
     /**
