@@ -44,7 +44,18 @@ class PageController extends Controller
      */
     public function ranking()
     {
-        return view('pages.ranking', ['participants' => Participant::all()]);
+        $rank = Participant::where('validated', '=', 1)
+                            ->where('showed', '=', 1)
+                            ->orderByRaw('CAST(talla AS UNSIGNED) DESC')
+                            ->orderByRaw('CAST(pesoEviserado AS UNSIGNED) DESC')
+                            ->limit(3)
+                            ->get();      
+        
+        return view('pages.ranking', ['first'=> isset($rank[0]->folio)? $rank[0]->folio : 'POR DEFINIRSE',
+                                      'second'=> isset($rank[1]->folio)? $rank[1]->folio : 'POR DEFINIRSE',
+                                      'third'=> isset($rank[2]->folio)? $rank[2]->folio : 'POR DEFINIRSE',
+                                      'participants' => Participant::all()
+                                    ]);
     }
 
     /**

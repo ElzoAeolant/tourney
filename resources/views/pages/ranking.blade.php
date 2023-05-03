@@ -15,7 +15,7 @@
                                 </div>
                                 <div class="col-7">
                                     <div class="numbers">
-                                        <p class="card-category">{{ __('POR DEFINIRSE') }}</p>
+                                        <p class="card-category">{{ $first }}</p>
                                         <h4 class="card-title">Primer Lugar</h4>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="col-7">
                                     <div class="numbers">
-                                        <p class="card-category">{{ __('POR DEFINIRSE') }}</p>
+                                        <p class="card-category">{{ $second }}</p>
                                         <h4 class="card-title">{{ __('Segundo Lugar') }}</h4>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="col-7">
                                     <div class="numbers">
-                                        <p class="card-category">{{ __('POR DEFINIRSE') }}</p>
+                                        <p class="card-category">{{ $third }}</p>
                                         <h4 class="card-title">{{ __('Tercer Lugar') }}</h4>
                                     </div>
                                 </div>
