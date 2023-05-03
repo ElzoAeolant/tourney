@@ -9,8 +9,11 @@
                         <div class="col-8">
                             <h3 class="mb-0">{{ __('Edit Participant') }}</h3>
                         </div>
+                        
+
                         <div class="col-4 text-right">
-                            <a href="{{ route('participant.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>
+                            <a href="https://pepebot.ecosur.mx:10443/images/map/map.jpg" class="btn btn-sm btn-warning" target="_blank">Ver Mapa</a>
+                            <a href="{{ route('participant.index') }}" class="btn btn-sm btn-warning">{{ __('Back to list') }}</a>                            
                         </div>
                     </div>
                 </div>
