@@ -61,7 +61,7 @@
                                                 <b>Fecha:</b> {{ $participant->fechaPesca }}<br>
                                                 <b>Arte:</b> {{ $participant->artePesca }}<br>
                                             </td>
-                                            <td><a href="{{$participant->url_pepebot }}">Ver Imagen</a> </td>                                           
+                                            <td><a target="_blank" href="{{$participant->url_pepebot }}">Ver Imagen</a> </td>                                           
                                             <td>{{ $participant->talla }}</td>
                                             <td>{{ $participant->pesoEviserado }}</td>
                                             <td><span class="badge badge-default" style="background-color:{{ $participant->validated==1?'green':'red' }}">{{  $participant->validated==1?'TRUE':'FALSE' }}</span></td>
