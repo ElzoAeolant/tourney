@@ -51,9 +51,9 @@ class PageController extends Controller
                             ->limit(3)
                             ->get();      
         
-        return view('pages.ranking', ['first'=> isset($rank[0]->folio)? $rank[0]->folio : 'POR DEFINIRSE',
-                                      'second'=> isset($rank[1]->folio)? $rank[1]->folio : 'POR DEFINIRSE',
-                                      'third'=> isset($rank[2]->folio)? $rank[2]->folio : 'POR DEFINIRSE',
+        return view('pages.ranking', ['first'=> isset($rank[0]->folio)? explode('_',$rank[0]->folio)[2] : 'POR DEFINIRSE',
+                                      'second'=> isset($rank[1]->folio)? explode('_',$rank[1]->folio)[2] : 'POR DEFINIRSE',
+                                      'third'=> isset($rank[2]->folio)? explode('_',$rank[2]->folio)[2] : 'POR DEFINIRSE',
                                       'participants' => Participant::all()
                                     ]);
     }
